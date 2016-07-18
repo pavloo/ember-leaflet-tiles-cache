@@ -1,6 +1,6 @@
 import TileLayer from 'ember-leaflet/components/tile-layer';
 
-export default Ember.Component.extend({
+export default TileLayer.extend({
   leafletOptions: [
     'useCache', 'saveToCache', 'useOnlyCache', 'cacheMaxAge'
   ],
