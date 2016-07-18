@@ -1,0 +1,1 @@
+export { default } from 'ember-leaflet-tiles-cache/components/tile-layer';
