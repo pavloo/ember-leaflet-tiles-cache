@@ -9,5 +9,9 @@ module.exports = {
       app.bowerDirectory +
         '/Leaflet.TileLayer.PouchDBCached/L.TileLayer.PouchDBCached.js'
     );
+    app.import(
+      app.bowerDirectory +
+        '/pouchdb/dist/pouchdb.min.js'
+    );
   }
 };

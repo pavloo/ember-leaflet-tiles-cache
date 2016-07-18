@@ -5,20 +5,25 @@ moduleForComponent('tile-layer', 'Integration | Component | tile layer', {
   integration: true
 });
 
-test('it renders', function(assert) {
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+test('it renders with useCache option', function(assert) {
+  this.set('tileOptions', {
+    type: 'map',
+    subdomains: '1234',
+    ext: 'png',
+    attribution: 'Map data © <a href="http://osm.org/copyright" target="_blank">OpenStreetMap</a> contributors',
+    useCache: true
+  });
 
-  this.render(hbs`{{tile-layer}}`);
+  this.set(
+    'tileUrl',
+    'http://cors.io/?u=https://tiles{s}-6466e93b22e58468d2cb026d1c3fbbae.skobblermaps.com/TileService/tiles/2.0/110015311100/2/{z}/{x}/{y}.png'
+  );
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
   this.render(hbs`
-    {{#tile-layer}}
-      template block text
-    {{/tile-layer}}
+    {{#leaflet-map lat=51.512983 lng=-0.138289 zoom=12}}
+      {{tile-layer url=tileUrl options=tileOptions}}
+    {{/leaflet-map}}
   `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), '+-Leaflet | Map data © OpenStreetMap contributors');
 });

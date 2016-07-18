@@ -47,6 +47,9 @@
     "ember-cli-babel": "^5.1.6"
   },
   "ember-addon": {
-    "configPath": "tests/dummy/config"
+    "configPath": "tests/dummy/config",
+    "after": [
+      "ember-leaflet"
+    ]
   }
 }
