@@ -1,3 +1,7 @@
 <h2 id="title">Welcome to Ember</h2>
 
+{{#leaflet-map lat=51.512983 lng=-0.138289 zoom=12}}
+  {{tile-layer url=tileUrl options=tileOptions}}
+{{/leaflet-map}}
+
 {{outlet}}
