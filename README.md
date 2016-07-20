@@ -1,4 +1,4 @@
-# Ember-leaflet-tiles-cache
+# ember-leaflet-tiles-cache [![Build Status](https://travis-ci.org/pavloo/ember-leaflet-tiles-cache.svg)](https://travis-ci.org/pavloo/ember-leaflet-tiles-cache) [![npm version](https://badge.fury.io/js/ember-leaflet-tiles-cache.svg)](https://badge.fury.io/js/ember-leaflet-tiles-cache)
 
 This addon extends [ember-leaflet](http://www.ember-leaflet.com/) 2.0. It extends the `{{tile-layer}}` component to support tiles caching.
 It uses [this leaflet extension](https://github.com/MazeMap/Leaflet.TileLayer.PouchDBCached) to accomplish that.
