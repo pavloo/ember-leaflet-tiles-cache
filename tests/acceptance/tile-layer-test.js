@@ -48,7 +48,7 @@ test('renders map and caches tiles to PouchDB', function(assert) {
   assert.expect(1);
 
   visit('/');
-  checkDbTotalDocs(5);
+  checkDbTotalDocs(8);
   Ember.Test.registerWaiter(function() {
     return dbTotalDocs !== 0;
   });
